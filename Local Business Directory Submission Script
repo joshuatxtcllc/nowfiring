@@ -1,0 +1,192 @@
+import requests
+import time
+import json
+import csv
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+
+class BusinessListingSubmitter:
+    def __init__(self, business_info, directories_file="houston_directories.csv"):
+        """
+        Initialize the submitter with business information and directory list
+        
+        Args:
+            business_info (dict): Dictionary containing business details
+            directories_file (str): CSV file containing directory submission URLs and requirements
+        """
+        self.business_info = business_info
+        self.directories_file = directories_file
+        self.successful_submissions = []
+        self.failed_submissions = []
+        self.driver = None
+    
+    def load_directories(self):
+        """Load directory information from CSV file"""
+        directories = []
+        with open(self.directories_file, 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                directories.append(row)
+        return directories
+    
+    def setup_webdriver(self):
+        """Set up and configure the Selenium WebDriver"""
+        options = webdriver.ChromeOptions()
+        options.add_argument('--headless')  # Run in headless mode (no UI)
+        self.driver = webdriver.Chrome(options=options)
+        
+    def submit_to_google_business(self):
+        """Submit business to Google Business Profile"""
+        # Note: Google Business Profile requires OAuth and more complex handling
+        # This is a simplified example - would need to use Google My Business API
+        print("Submitting to Google Business Profile...")
+        # Implementation would use Google My Business API
+        
+    def submit_to_bing_places(self):
+        """Submit business to Bing Places"""
+        print("Submitting to Bing Places...")
+        # Implementation for Bing Places submission
+        
+    def submit_to_directory(self, directory):
+        """
+        Submit business information to a specific directory
+        
+        Args:
+            directory (dict): Directory information including URL and field mappings
+        
+        Returns:
+            bool: Success status
+        """
+        try:
+            print(f"Submitting to {directory['name']}...")
+            
+            # Navigate to submission page
+            self.driver.get(directory['submission_url'])
+            
+            # Wait for page to load
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.ID, directory['form_id']))
+            )
+            
+            # Fill in the form fields based on mapping
+            field_mappings = json.loads(directory['field_mappings'])
+            for field, selector in field_mappings.items():
+                if field in self.business_info:
+                    element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                    element.send_keys(self.business_info[field])
+            
+            # Handle any captchas (would need additional implementation)
+            if directory.get('has_captcha', 'False') == 'True':
+                print(f"CAPTCHA detected on {directory['name']}. Manual intervention required.")
+                # This would need manual handling or integration with a CAPTCHA solving service
+                
+            # Submit the form
+            submit_button = self.driver.find_element(By.CSS_SELECTOR, directory['submit_button'])
+            submit_button.click()
+            
+            # Verify submission success (look for success message or redirect)
+            try:
+                WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, directory['success_indicator']))
+                )
+                self.successful_submissions.append(directory['name'])
+                return True
+            except TimeoutException:
+                self.failed_submissions.append(directory['name'])
+                return False
+                
+        except Exception as e:
+            print(f"Error submitting to {directory['name']}: {str(e)}")
+            self.failed_submissions.append(directory['name'])
+            return False
+    
+    def submit_to_all(self):
+        """Submit business information to all directories"""
+        self.setup_webdriver()
+        directories = self.load_directories()
+        
+        # First submit to major search engines
+        self.submit_to_google_business()
+        self.submit_to_bing_places()
+        
+        # Then submit to other directories
+        for directory in directories:
+            # Add delay between submissions to avoid being flagged as a bot
+            time.sleep(5)
+            self.submit_to_directory(directory)
+            
+        self.driver.quit()
+        
+        # Generate report
+        self.generate_report()
+    
+    def generate_report(self):
+        """Generate a report of submission results"""
+        print("\n==== Submission Report ====")
+        print(f"Total directories: {len(self.successful_submissions) + len(self.failed_submissions)}")
+        print(f"Successful submissions: {len(self.successful_submissions)}")
+        print(f"Failed submissions: {len(self.failed_submissions)}")
+        
+        if self.successful_submissions:
+            print("\nSuccessful directories:")
+            for directory in self.successful_submissions:
+                print(f"- {directory}")
+                
+        if self.failed_submissions:
+            print("\nFailed directories:")
+            for directory in self.failed_submissions:
+                print(f"- {directory}")
+
+# Example usage
+if __name__ == "__main__":
+    # Business information
+    my_business = {
+        "name": "Houston Tech Solutions",
+        "address": "123 Main Street, Houston, TX 77002",
+        "phone": "(713) 555-1234",
+        "website": "https://houstontechsolutions.com",
+        "description": "IT consulting and web development services for Houston businesses",
+        "categories": ["Web Development", "IT Consulting", "SEO Services"],
+        "hours": {
+            "Monday": "9:00 AM - 5:00 PM",
+            "Tuesday": "9:00 AM - 5:00 PM",
+            "Wednesday": "9:00 AM - 5:00 PM",
+            "Thursday": "9:00 AM - 5:00 PM",
+            "Friday": "9:00 AM - 5:00 PM",
+            "Saturday": "Closed",
+            "Sunday": "Closed"
+        },
+        "email": "contact@houstontechsolutions.com",
+        "year_established": "2018",
+        "owner_name": "Jane Smith"
+    }
+    
+    # Create CSV file structure for directories (in a real scenario, this would be pre-populated)
+    example_directory = {
+        "name": "Houston Business Directory",
+        "submission_url": "https://houstonbiz.com/submit-listing",
+        "form_id": "listing-form",
+        "field_mappings": json.dumps({
+            "name": "#business-name",
+            "address": "#business-address",
+            "phone": "#business-phone",
+            "website": "#business-website",
+            "description": "#business-description"
+        }),
+        "submit_button": "#submit-listing",
+        "success_indicator": ".success-message",
+        "has_captcha": "False"
+    }
+    
+    # In a real scenario, this file would already exist with many directories
+    with open("houston_directories.csv", "w", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=example_directory.keys())
+        writer.writeheader()
+        writer.writerow(example_directory)
+    
+    # Create and run the submitter
+    submitter = BusinessListingSubmitter(my_business)
+    submitter.submit_to_all()
