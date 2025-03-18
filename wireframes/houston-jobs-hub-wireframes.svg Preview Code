@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800">
+  <!-- Wireframe Grid Lines -->
+  <defs>
+    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#f0f0f0" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background Grid -->
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Houston Jobs Hub - Wireframes</text>
+  
+  <!-- Homepage Wireframe -->
+  <g transform="translate(50, 80)">
+    <!-- Frame and Title -->
+    <rect x="0" y="0" width="500" height="650" fill="#fff" stroke="#333" stroke-width="2" />
+    <text x="250" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Homepage</text>
+    
+    <!-- Header -->
+    <rect x="0" y="50" width="500" height="60" fill="#eee" stroke="#ccc" stroke-width="1" />
+    <rect x="20" y="65" width="120" height="30" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <text x="80" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    
+    <!-- Navigation -->
+    <rect x="160" y="65" width="220" height="30" fill="none" stroke="#ccc" stroke-width="1" />
+    <text x="270" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Navigation Menu</text>
+    
+    <!-- Auth Buttons -->
+    <rect x="400" y="65" width="40" height="30" rx="5" ry="5" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <rect x="445" y="65" width="40" height="30" rx="5" ry="5" fill="#2563eb" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Hero Section -->
+    <rect x="0" y="110" width="500" height="180" fill="#e6f0ff" stroke="#ccc" stroke-width="1" />
+    <rect x="50" y="130" width="400" height="60" fill="none" stroke="none" />
+    <text x="250" y="155" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Find Your Next Opportunity in Houston</text>
+    <text x="250" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Job board and business directory connecting talent with local companies</text>
+    
+    <!-- Search Box -->
+    <rect x="50" y="200" width="400" height="60" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="60" y="215" width="180" height="30" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    <rect x="250" y="215" width="100" height="30" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    <rect x="360" y="215" width="80" height="30" rx="3" ry="3" fill="#2563eb" stroke="#ccc" stroke-width="1" />
+    <text x="400" y="235" font-family="Arial" font-size="12" text-anchor="middle" fill="#fff">Search</text>
+    
+    <!-- Featured Jobs -->
+    <text x="20" y="320" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Featured Jobs</text>
+    <text x="480" y="320" font-family="Arial" font-size="12" text-anchor="end" fill="#2563eb">View All</text>
+    
+    <!-- Job Cards -->
+    <rect x="20" y="340" width="140" height="160" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="180" y="340" width="140" height="160" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="340" y="340" width="140" height="160" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Card Contents (first card) -->
+    <rect x="30" y="355" width="40" height="40" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    <text x="90" y="380" font-family="Arial" font-size="11" text-anchor="middle" fill="#333">Company Logo</text>
+    <rect x="30" y="405" width="120" height="10" fill="#f0f0f0" stroke="none" />
+    <rect x="30" y="425" width="90" height="10" fill="#f0f0f0" stroke="none" />
+    <rect x="30" y="445" width="120" height="20" fill="#f0f0f0" stroke="none" />
+    <rect x="30" y="475" width="60" height="10" fill="#f0f0f0" stroke="none" />
+    <rect x="100" y="475" width="50" height="10" fill="#f0f0f0" stroke="none" />
+    
+    <!-- Featured Businesses -->
+    <text x="20" y="530" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Featured Businesses</text>
+    <text x="480" y="530" font-family="Arial" font-size="12" text-anchor="end" fill="#2563eb">View All</text>
+    
+    <!-- Business Cards -->
+    <rect x="20" y="550" width="140" height="120" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="180" y="550" width="140" height="120" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="340" y="550" width="140" height="120" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+  </g>
+  
+  <!-- Job Posting Page Wireframe -->
+  <g transform="translate(650, 80)">
+    <!-- Frame and Title -->
+    <rect x="0" y="0" width="500" height="650" fill="#fff" stroke="#333" stroke-width="2" />
+    <text x="250" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Job Posting Page</text>
+    
+    <!-- Header (same as homepage) -->
+    <rect x="0" y="50" width="500" height="60" fill="#eee" stroke="#ccc" stroke-width="1" />
+    <rect x="20" y="65" width="120" height="30" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <text x="80" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    <rect x="160" y="65" width="220" height="30" fill="none" stroke="#ccc" stroke-width="1" />
+    <text x="270" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Navigation Menu</text>
+    <rect x="400" y="65" width="40" height="30" rx="5" ry="5" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <rect x="445" y="65" width="40" height="30" rx="5" ry="5" fill="#2563eb" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Page Title -->
+    <rect x="0" y="110" width="500" height="80" fill="#f5f5f5" stroke="#ccc" stroke-width="1" />
+    <text x="250" y="155" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Post a Job</text>
+    
+    <!-- Form Container -->
+    <rect x="50" y="210" width="400" height="420" fill="#fff" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Form Fields -->
+    <text x="70" y="240" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Job Details</text>
+    
+    <!-- Job Title -->
+    <text x="70" y="270" font-family="Arial" font-size="12" fill="#666">Job Title*</text>
+    <rect x="70" y="280" width="360" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Company Name -->
+    <text x="70" y="335" font-family="Arial" font-size="12" fill="#666">Company Name*</text>
+    <rect x="70" y="345" width="360" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Location -->
+    <text x="70" y="400" font-family="Arial" font-size="12" fill="#666">Location*</text>
+    <rect x="70" y="410" width="360" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Job Type -->
+    <text x="70" y="465" font-family="Arial" font-size="12" fill="#666">Job Type*</text>
+    <rect x="70" y="475" width="360" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Description -->
+    <text x="70" y="530" font-family="Arial" font-size="12" fill="#666">Job Description*</text>
+    <rect x="70" y="540" width="360" height="60" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Submit Button -->
+    <rect x="260" y="620" width="170" height="40" rx="5" ry="5" fill="#2563eb" stroke="none" />
+    <text x="345" y="645" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Post Job</text>
+  </g>
+  
+  <!-- Business Directory Page Wireframe -->
+  <g transform="translate(50, 780)">
+    <!-- Frame and Title -->
+    <rect x="0" y="0" width="500" height="650" fill="#fff" stroke="#333" stroke-width="2" />
+    <text x="250" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Business Directory</text>
+    
+    <!-- Header (same as other pages) -->
+    <rect x="0" y="50" width="500" height="60" fill="#eee" stroke="#ccc" stroke-width="1" />
+    <rect x="20" y="65" width="120" height="30" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <text x="80" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    <rect x="160" y="65" width="220" height="30" fill="none" stroke="#ccc" stroke-width="1" />
+    <text x="270" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Navigation Menu</text>
+    <rect x="400" y="65" width="40" height="30" rx="5" ry="5" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <rect x="445" y="65" width="40" height="30" rx="5" ry="5" fill="#2563eb" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Search Box -->
+    <rect x="50" y="130" width="400" height="50" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="60" y="140" width="300" height="30" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    <rect x="370" y="140" width="70" height="30" rx="3" ry="3" fill="#2563eb" stroke="#ccc" stroke-width="1" />
+    <text x="405" y="160" font-family="Arial" font-size="12" text-anchor="middle" fill="#fff">Search</text>
+    
+    <!-- Filters -->
+    <rect x="50" y="190" width="400" height="40" fill="#f5f5f5" stroke="#ccc" stroke-width="1" />
+    <text x="70" y="215" font-family="Arial" font-size="12" fill="#666">Filter By:</text>
+    <rect x="130" y="195" width="80" height="30" rx="3" ry="3" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <text x="170" y="215" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Category</text>
+    <rect x="220" y="195" width="80" height="30" rx="3" ry="3" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <text x="260" y="215" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Location</text>
+    <rect x="310" y="195" width="80" height="30" rx="3" ry="3" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <text x="350" y="215" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Rating</text>
+    
+    <!-- Business Listings -->
+    <rect x="50" y="250" width="400" height="120" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="70" y="270" width="80" height="80" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    <text x="110" y="310" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    <text x="170" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Business Name</text>
+    <text x="170" y="305" font-family="Arial" font-size="12" fill="#666">Category • Location</text>
+    <text x="170" y="330" font-family="Arial" font-size="12" fill="#666">Short description of the business...</text>
+    <rect x="390" y="270" width="40" height="30" rx="3" ry="3" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    
+    <rect x="50" y="380" width="400" height="120" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="70" y="400" width="80" height="80" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    <text x="110" y="440" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    <text x="170" y="410" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Business Name</text>
+    <text x="170" y="435" font-family="Arial" font-size="12" fill="#666">Category • Location</text>
+    <text x="170" y="460" font-family="Arial" font-size="12" fill="#666">Short description of the business...</text>
+    <rect x="390" y="400" width="40" height="30" rx="3" ry="3" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    
+    <rect x="50" y="510" width="400" height="120" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="70" y="530" width="80" height="80" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    <text x="110" y="570" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    <text x="170" y="540" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Business Name</text>
+    <text x="170" y="565" font-family="Arial" font-size="12" fill="#666">Category • Location</text>
+    <text x="170" y="590" font-family="Arial" font-size="12" fill="#666">Short description of the business...</text>
+    <rect x="390" y="530" width="40" height="30" rx="3" ry="3" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+  </g>
+  
+  <!-- Directory Submission Tool Wireframe -->
+  <g transform="translate(650, 780)">
+    <!-- Frame and Title -->
+    <rect x="0" y="0" width="500" height="650" fill="#fff" stroke="#333" stroke-width="2" />
+    <text x="250" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Directory Submission Tool</text>
+    
+    <!-- Header (same as other pages) -->
+    <rect x="0" y="50" width="500" height="60" fill="#eee" stroke="#ccc" stroke-width="1" />
+    <rect x="20" y="65" width="120" height="30" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <text x="80" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Logo</text>
+    <rect x="160" y="65" width="220" height="30" fill="none" stroke="#ccc" stroke-width="1" />
+    <text x="270" y="85" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Navigation Menu</text>
+    <rect x="400" y="65" width="40" height="30" rx="5" ry="5" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <rect x="445" y="65" width="40" height="30" rx="5" ry="5" fill="#2563eb" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Page Title -->
+    <rect x="0" y="110" width="500" height="80" fill="#f5f5f5" stroke="#ccc" stroke-width="1" />
+    <text x="250" y="155" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Directory Submission Assistant</text>
+    <text x="250" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">Submit your business to multiple local directories</text>
+    
+    <!-- Submission Form -->
+    <rect x="50" y="210" width="400" height="400" fill="#fff" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Business Information Section -->
+    <text x="70" y="240" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Business Information</text>
+    
+    <!-- Name -->
+    <text x="70" y="270" font-family="Arial" font-size="12" fill="#666">Business Name*</text>
+    <rect x="70" y="280" width="360" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Address -->
+    <text x="70" y="335" font-family="Arial" font-size="12" fill="#666">Address*</text>
+    <rect x="70" y="345" width="360" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Phone & Website (row) -->
+    <text x="70" y="400" font-family="Arial" font-size="12" fill="#666">Phone*</text>
+    <rect x="70" y="410" width="170" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <text x="260" y="400" font-family="Arial" font-size="12" fill="#666">Website*</text>
+    <rect x="260" y="410" width="170" height="35" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Description -->
+    <text x="70" y="465" font-family="Arial" font-size="12" fill="#666">Business Description*</text>
+    <rect x="70" y="475" width="360" height="60" rx="3" ry="3" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Directory Selection -->
+    <text x="70" y="555" font-family="Arial" font-size="12" fill="#666">Select Directories</text>
+    <rect x="70" y="565" width="360" height="25" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    <text x="90" y="582" font-family="Arial" font-size="12" fill="#666">Google Business Profile</text>
+    <rect x="75" y="570" width="15" height="15" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <rect x="77" y="572" width="11" height="11" fill="#2563eb" stroke="none" />
+    
+    <!-- Submit Button -->
+    <rect x="195" y="630" width="180" height="40" rx="5" ry="5" fill="#2563eb" stroke="none" />
+    <text x="285" y="655" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#fff">Submit to Directories</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(350, 1480)">
+    <rect x="0" y="0" width="500" height="180" fill="#f9f9f9" stroke="#ccc" stroke-width="1" rx="5" ry="5" />
+    <text x="250" y="30" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Wireframe Legend</text>
+    
+    <rect x="30" y="50" width="40" height="20" fill="#eee" stroke="#ccc" stroke-width="1" />
+    <text x="90" y="65" font-family="Arial" font-size="12" fill="#333">Header/Footer Areas</text>
+    
+    <rect x="30" y="80" width="40" height="20" fill="#e6f0ff" stroke="#ccc" stroke-width="1" />
+    <text x="90" y="95" font-family="Arial" font-size="12" fill="#333">Hero/Feature Areas</text>
+    
+    <rect x="30" y="110" width="40" height="20" fill="#fff" stroke="#ccc" stroke-width="1" />
+    <text x="90" y="125" font-family="Arial" font-size="12" fill="#333">Content Areas</text>
+    
+    <rect x="30" y="140" width="40" height="20" fill="#2563eb" stroke="none" />
+    <text x="90" y="155" font-family="Arial" font-size="12" fill="#333">Action Buttons/Links</text>
+    
+    <rect x="250" y="50" width="40" height="20" fill="#f9f9f9" stroke="#ccc" stroke-width="1" />
+    <text x="310" y="65" font-family="Arial" font-size="12" fill="#333">Form Fields</text>
+    
+    <rect x="250" y="80" width="40" height="20" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+    <text x="310" y="95" font-family="Arial" font-size="12" fill="#333">Image Placeholders</text>
+    
+    <rect x="250" y="110" width="40" height="20" fill="#f5f5f5" stroke="#ccc" stroke-width="1" />
+    <text x="310" y="125" font-family="Arial" font-size="12" fill="#333">Section Dividers</text>
+    
+    <rect x="250" y="140" width="40" height="20" fill="#ddd" stroke="#ccc" stroke-width="1" />
+    <text x="310" y="155" font-family="Arial" font-size="12" fill="#333">Navigation Elements</text>
+  </g>
+  
+  <!-- Notes -->
+  <g transform="translate(350, 1680)">
+    <text x="250" y="0" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Implementation Notes</text>
+    <text x="0" y="30" font-family="Arial" font-size="12" fill="#666">1. Use responsive design to ensure mobile compatibility</text>
+    <text x="0" y="50" font-family="Arial" font-size="12" fill="#666">2. Implement user authentication for job posting and business submission</text>
+    <text x="0" y="70" font-family="Arial" font-size="12" fill="#666">3. Create admin dashboard for managing listings and submissions</text>
+    <text x="0" y="90" font-family="Arial" font-size="12" fill="#666">4. Optimize all pages for SEO with proper meta tags and structured data</text>
+    <text x="0" y="110" font-family="Arial" font-size="12" fill="#666">5. Directory submission tool should include progress tracking and reporting</text>
+  </g>
+</svg>
