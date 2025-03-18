@@ -1,0 +1,38 @@
+{
+  "name": "houston-jobs-hub",
+  "version": "1.0.0",
+  "description": "A local job board and business directory for Houston, Texas that helps generate high-quality backlinks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "houston",
+    "jobs",
+    "job board",
+    "business directory",
+    "backlinks",
+    "seo",
+    "local seo"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/houston-jobs-hub.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
