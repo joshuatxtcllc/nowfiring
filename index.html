@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Houston Jobs Hub - The premier job board and business directory for Houston, Texas. Find local jobs and promote your business with quality backlinks.">
+    <title>Houston Jobs Hub | Local Jobs & Business Directory</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Houston Jobs Hub | Local Jobs & Business Directory">
+    <meta property="og:description" content="The premier job board and business directory for Houston, Texas. Find local jobs and promote your business.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://houstonjobshub.com">
+    <meta property="og:image" content="https://houstonjobshub.com/images/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/houston-jobs-hub-logo.svg" alt="Houston Jobs Hub Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/jobs">Browse Jobs</a></li>
+                    <li><a href="/post-job">Post a Job</a></li>
+                    <li><a href="/businesses">Business Directory</a></li>
+                    <li><a href="/submit-business">Add Your Business</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="/login" class="btn btn-outline">Log In</a>
+                <a href="/signup" class="btn btn-primary">Sign Up</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Find Your Next Opportunity in Houston</h1>
+                    <p>The premier job board and business directory connecting Houston's best talent with local companies.</p>
+                    <div class="search-container">
+                        <form action="/search" method="GET" class="search-form">
+                            <div class="search-input-group">
+                                <input type="text" name="keyword" placeholder="Job title, keyword, or company" class="search-input">
+                                <select name="category" class="category-select">
+                                    <option value="">All Categories</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="education">Education</option>
+                                    <option value="energy">Energy & Oil</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="hospitality">Hospitality</option>
+                                </select>
+                                <input type="text" name="location" placeholder="Houston, TX" class="location-input" value="Houston, TX">
+                                <button type="submit" class="search-button">Search Jobs</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Jobs Section -->
+        <section class="featured-jobs">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Jobs in Houston</h2>
+                    <a href="/jobs" class="view-all">View All Jobs</a>
+                </div>
+                <div class="jobs-grid">
+                    <!-- Job cards will be generated dynamically -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <img src="images/companies/example-company.jpg" alt="Example Company Logo" class="company-logo">
+                            <div class="job-type">Full-time</div>
+                        </div>
+                        <div class="job-card-body">
+                            <h3 class="job-title"><a href="/jobs/senior-web-developer">Senior Web Developer</a></h3>
+                            <div class="company-name"><a href="/companies/example-company">Example Company</a></div>
+                            <div class="job-location">Downtown Houston</div>
+                            <p class="job-snippet">Join our team of passionate developers building innovative web applications for clients across multiple industries...</p>
+                        </div>
+                        <div class="job-card-footer">
+                            <div class="job-salary">$90,000 - $120,000</div>
+                            <div class="job-posted">Posted 2 days ago</div>
+                        </div>
+                    </div>
+                    <!-- More job cards would go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Businesses Section -->
+        <section class="featured-businesses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Houston Businesses</h2>
+                    <a href="/businesses" class="view-all">View All Businesses</a>
+                </div>
+                <div class="businesses-grid">
+                    <!-- Business cards will be generated dynamically -->
+                    <div class="business-card">
+                        <div class="business-card-header">
+                            <img src="images/businesses/example-business.jpg" alt="Example Business" class="business-logo">
+                        </div>
+                        <div class="business-card-body">
+                            <h3 class="business-name"><a href="/businesses/example-business">Example Business</a></h3>
+                            <div class="business-category">Technology</div>
+                            <div class="business-location">Midtown, Houston</div>
+                            <p class="business-description">A leading technology company providing innovative solutions for businesses across Houston...</p>
+                        </div>
+                        <div class="business-card-footer">
+                            <a href="/businesses/example-business" class="btn btn-outline btn-sm">View Profile</a>
+                            <a href="/businesses/example-business/jobs" class="btn btn-primary btn-sm">See Jobs</a>
+                        </div>
+                    </div>
+                    <!-- More business cards would go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How Houston Jobs Hub Works</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="images/icons/create-profile.svg" alt="Create Profile Icon">
+                        </div>
+                        <h3>Create Your Profile</h3>
+                        <p>Sign up and create your business or job seeker profile to get started.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="images/icons/post-job.svg" alt="Post Job Icon">
+                        </div>
+                        <h3>Post Jobs or List Your Business</h3>
+                        <p>Easily post job openings or add your business to our directory.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="images/icons/get-visibility.svg" alt="Get Visibility Icon">
+                        </div>
+                        <h3>Gain Local Visibility</h3>
+                        <p>Get discovered by Houston's best talent and potential customers.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="images/icons/improve-seo.svg" alt="Improve SEO Icon">
+                        </div>
+                        <h3>Boost Your SEO</h3>
+                        <p>Generate quality backlinks to improve your website's search ranking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Houston Businesses Are Saying</h2>
+                <div class="testimonials-carousel">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Houston Jobs Hub helped us find qualified candidates quickly while improving our online visibility. The backlinks from our job listings have significantly improved our SEO."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/testimonials/author1.jpg" alt="Testimonial Author" class="author-image">
+                            <div class="author-info">
+                                <div class="author-name">Jane Smith</div>
+                                <div class="author-position">HR Director, TechHouston</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More testimonials would go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing">
+            <div class="container">
+                <h2>Simple, Transparent Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <h3>Basic</h3>
+                            <div class="price">Free</div>
+                        </div>
+                        <div class="pricing-card-body">
+                            <ul class="pricing-features">
+                                <li>Business Directory Listing</li>
+                                <li>1 Job Posting</li>
+                                <li>Basic Business Profile</li>
+                                <li>30 Days Visibility</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="/signup" class="btn btn-outline btn-block">Get Started</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="pricing-card-header">
+                            <h3>Premium</h3>
+                            <div class="price">$49<span>/month</span></div>
+                        </div>
+                        <div class="pricing-card-body">
+                            <ul class="pricing-features">
+                                <li>Enhanced Directory Listing</li>
+                                <li>5 Job Postings</li>
+                                <li>Featured Business Profile</li>
+                                <li>60 Days Visibility</li>
+                                <li>Local Directory Submission</li>
+                                <li>SEO Optimization</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="/signup?plan=premium" class="btn btn-primary btn-block">Get Started</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <h3>Enterprise</h3>
+                            <div class="price">$149<span>/month</span></div>
+                        </div>
+                        <div class="pricing-card-body">
+                            <ul class="pricing-features">
+                                <li>Priority Directory Placement</li>
+                                <li>Unlimited Job Postings</li>
+                                <li>Featured Business Profile</li>
+                                <li>90 Days Visibility</li>
+                                <li>Automated Directory Submissions</li>
+                                <li>Advanced SEO Optimization</li>
+                                <li>Analytics Dashboard</li>
+                                <li>Email Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="/signup?plan=enterprise" class="btn btn-outline btn-block">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Boost Your Houston Business?</h2>
+                    <p>Join hundreds of local businesses improving their visibility and finding top talent on Houston Jobs Hub.</p>
+                    <div class="cta-buttons">
+                        <a href="/signup" class="btn btn-primary btn-lg">Get Started Today</a>
+                        <a href="/contact" class="btn btn-outline btn-lg">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/houston-jobs-hub-logo-white.svg" alt="Houston Jobs Hub Logo">
+                    </div>
+                    <p class="footer-tagline">Connecting Houston businesses with local talent since 2023.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/houstonjobshub" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/houstonjobshub" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/houstonjobshub" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/houstonjobshub" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="/jobs">Browse Jobs</a></li>
+                        <li><a href="/companies">Companies</a></li>
+                        <li><a href="/resources/job-seekers">Resources</a></li>
+                        <li><a href="/create-profile">Create Profile</a></li>
+                        <li><a href="/job-alerts">Job Alerts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="/post-job">Post a Job</a></li>
+                        <li><a href="/submit-business">Add Your Business</a></li>
+                        <li><a href="/resources/employers">Resources</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/success-stories">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Houston Jobs Hub</h3>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/sitemap">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Houston Jobs Hub. All rights reserved.
+                </div>
+                <div class="attribution">
+                    Made with ❤️ in Houston, Texas
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
