@@ -1,0 +1,64 @@
+# Netlify configuration file
+# This file configures how the site is built and deployed on Netlify
+
+[build]
+  # Base directory to run commands
+  base = "/"
+
+  # Directory with the publish-ready HTML files and assets
+  publish = "/"
+
+  # Default build command
+  command = "# No build command needed for static HTML/CSS/JS"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/jobs/*"
+  to = "/jobs.html"
+  status = 200
+
+[[redirects]]
+  from = "/businesses/*"
+  to = "/businesses.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+
+# Cache control for static assets
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
