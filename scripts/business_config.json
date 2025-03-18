@@ -1,0 +1,69 @@
+{
+  "name": "Houston Jobs Hub",
+  "address": "123 Main Street",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77002",
+  "phone": "(713) 555-1234",
+  "website": "https://houstonjobshub.com",
+  "email": "contact@houstonjobshub.com",
+  "description": "Houston Jobs Hub is the premier job board and business directory for Houston, Texas. We connect local businesses with talented professionals and help improve visibility through quality backlinks and directory listings.",
+  "category": "Employment Services",
+  "categories": ["Job Board", "Business Directory", "Employment Agency", "Local Business Service"],
+  "year_established": "2023",
+  "business_hours": {
+    "Monday": "9:00 AM - 5:00 PM",
+    "Tuesday": "9:00 AM - 5:00 PM",
+    "Wednesday": "9:00 AM - 5:00 PM",
+    "Thursday": "9:00 AM - 5:00 PM",
+    "Friday": "9:00 AM - 5:00 PM",
+    "Saturday": "Closed",
+    "Sunday": "Closed"
+  },
+  "social_media": {
+    "facebook": "https://facebook.com/houstonjobshub",
+    "twitter": "https://twitter.com/houstonjobshub",
+    "linkedin": "https://linkedin.com/company/houstonjobshub",
+    "instagram": "https://instagram.com/houstonjobshub"
+  },
+  "owner_name": "Your Name",
+  "contact_person": "Your Name",
+  "contact_title": "Founder & CEO",
+  "services": [
+    "Job Postings",
+    "Business Directory Listings",
+    "Local SEO Enhancement",
+    "Automated Directory Submissions",
+    "Business Profile Creation"
+  ],
+  "keywords": [
+    "houston jobs",
+    "houston job board",
+    "houston business directory",
+    "houston employment",
+    "houston hiring",
+    "local houston businesses",
+    "houston backlinks",
+    "houston SEO"
+  ],
+  "payment_methods": [
+    "Credit Card",
+    "PayPal",
+    "Stripe"
+  ],
+  "logo_url": "https://houstonjobshub.com/images/houston-jobs-hub-logo.svg",
+  "photos": [
+    "https://houstonjobshub.com/images/office-photo-1.jpg",
+    "https://houstonjobshub.com/images/office-photo-2.jpg"
+  ],
+  "tags": [
+    "job board",
+    "employment",
+    "business directory",
+    "houston",
+    "local business",
+    "backlinks",
+    "SEO"
+  ],
+  "additional_info": "Houston Jobs Hub was founded to address the need for a comprehensive local job board that also serves as a valuable business directory. Our platform helps local businesses improve their online visibility while connecting them with talented professionals in the Houston area."
+}
